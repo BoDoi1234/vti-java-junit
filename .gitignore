@@ -1,5 +1,0 @@
-# Customs Ignore files/folder to be commited
-/.idea/
-/target/
-*.log
-/logs/
