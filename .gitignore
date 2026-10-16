@@ -1,6 +1,5 @@
 # Customs Ignore files/folder to be commited
 /.idea/
-*.log
 /target/
 
 # Created by https://www.gitignore.io/api/java,maven,eclipse,intellij+all,visualstudiocode
