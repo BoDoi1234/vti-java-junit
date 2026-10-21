@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns=""
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="">
+
+    <Appenders>
+        <!-- Config to print console
+         name: config name. Need to be referenced in <Logger> -->
+        <Console name="CONSOLE">
+            <PatternLayout pattern="[%d] [%t] [%p] [%c] - %m%n"/>
+        </Console>
+
+        <!--  Config to write log to file   -->
+        <!--  fileName: path to save file   -->
+        <!--  name: config name. Need to be referenced in <Logger>  -->
+        <!--  append: = false => overwrite  -->
+        <File name="MAIN" fileName="logs/main.log" append="false">
+        <!--  %d: date time -->
+        <!--  %t: thread name  -->
+        <!--  %p: log level name  -->
+        <!--  %c: class name  -->
+        <!--  %m: message  -->
+            <PatternLayout pattern="[%d] [%t] [%p] [%c] - %m%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <!--  Set log level & call config <Appender>  -->
+        <Root level="TRACE">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="MAIN"/>
+        </Root>
+
+        <!--  name: condition to call appender => package name -->
+<!--        <Logger name="vn.vti" level="TRACE">-->
+<!--            <AppenderRef ref="DEBUG_LOG"/>-->
+<!--        </Logger>-->
+    </Loggers>
+</Configuration>
